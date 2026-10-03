@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alexandre Kiefer — Portfolio Infrastructure & Cybersécurité</title>
+<meta name="description" content="Portfolio d'Alexandre Kiefer, Administrateur Systèmes, Réseaux & Cybersécurité.">
+<link rel="stylesheet" href="style.css?v=10.0">
+</head>
+<body>
+<canvas id="net"></canvas>
+
+<header>
+  <div class="navwrap">
+    <a class="logo" href="#home">alexandre@portfolio:<b>~$</b></a>
+    <nav>
+      <a href="#profil">profil</a><a href="#experience">expérience</a><a href="#aegis">Aegis</a><a href="#infra-live">infra live</a><a href="#roadmap">projets</a><a href="#realisations">réalisations</a>
+      <a href="#competences">compétences</a><a href="#certifs">certifs</a><a href="#cv">cv</a><a href="#contact">contact</a>
+    </nav>
+    <span class="lang">FR</span>
+  </div>
+</header>
+
+<aside class="scroll-rail" aria-hidden="true"><span>AK</span><i></i><b>01</b><b>02</b><b>03</b><b>04</b><b>05</b><b>06</b><b>07</b></aside>
+<main id="home">
+<section class="hero shell">
+  <div class="hero-grid">
+    <div>
+      <p class="availability">● EN RECHERCHE D'ALTERNANCE · SYSTÈMES · RÉSEAUX · CYBERSÉCURITÉ</p>
+      <h1>Alexandre<br><em>Kiefer</em></h1>
+      <p class="lead">Administrateur Systèmes, Réseaux & Cybersécurité. Je construis, administre et sécurise des environnements IT Windows/Linux, du réseau jusqu'à la supervision.</p>
+      <div class="techline"><span>Windows Server</span><span>Active Directory</span><span>VMware</span><span>OPNsense</span><span>Debian</span><span>Zabbix</span></div>
+      <div class="hero-actions"><a href="#infra-live">Explorer mon infrastructure →</a><a href="CV_Kiefer_Alexandre_Alternance.pdf" target="_blank">Voir mon CV ↗</a></div>
+    </div>
+    <aside class="identity-card mission-card">
+      <div class="mission-head"><span>AK // ROADMAP</span><b>2026 → 2027</b></div>
+      <div class="mission-core">
+        <small>ACTUELLEMENT</small>
+        <h3>Aegis Infra Lab</h3>
+        <p>Infrastructure Windows / Linux, réseau, sécurité, supervision et continuité.</p>
+        <div class="progress-line"><i></i></div>
+        <strong>EN FINALISATION</strong>
+      </div>
+      <div class="mission-next">
+        <div><span>01</span><p><b>Linux</b><small>Hardening · automatisation</small></p></div>
+        <div><span>02</span><p><b>Cloud</b><small>Azure · identité · réseau</small></p></div>
+        <div><span>03</span><p><b>Blue Team</b><small>SIEM · détection · logs</small></p></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-head"><div><i></i><i></i><i></i></div><span>ssh alexandre@portfolio</span></div>
+    <div id="terminalOutput" class="terminal-output">
+      <div><b>alexandre@portfolio:~$</b> whoami</div>
+      <div>Alexandre Kiefer · Administrateur Systèmes, Réseaux & Cybersécurité</div>
+      <div><b>alexandre@portfolio:~$</b> cat objectif.txt</div>
+      <div>Alternance 24 mois · Mastère Expert Cybersécurité</div>
+      <div class="hint">Terminal interactif — tape <strong>help</strong> pour commencer.</div>
+    </div>
+    <form id="terminalForm"><label>alexandre@portfolio:~$</label><input id="terminalInput" placeholder="help" autocomplete="off"><button>Valider</button></form>
+  </div>
+
+  <div class="search-card">
+    <div><small>ALTERNANCE · RECHERCHE ACTIVE</small><strong>Disponible pour une alternance</strong></div>
+    <div><small>DOMAINE</small><b>Infra · Systèmes<br>Réseaux · Cyber</b></div>
+    <div><small>FORMATION VISÉE</small><b>Mastère Expert<br>Cybersécurité</b></div>
+    <div><small>RYTHME</small><b>1 semaine école<br>3 semaines entreprise</b></div>
+    <a href="#contact">Me contacter →</a>
+  </div>
+</section>
+
+
+<section class="shell quick-facts" aria-label="Informations clés">
+  <div class="quick-facts-head"><span>PROFILE_STATUS</span><small>● AVAILABLE // ALTERNANCE 2026</small></div>
+  <div class="quick-facts-grid">
+    <div><small>OBJECTIF</small><b>Alternance · 24 mois</b><span>Mastère Expert Cybersécurité</span></div>
+    <div><small>RYTHME</small><b>1 semaine / 3 semaines</b><span>École / Entreprise</span></div>
+    <div><small>LOCALISATION</small><b>Savigny-sur-Orge (91)</b><span>Île-de-France</span></div>
+    <div><small>MOBILITÉ</small><b>Permis B</b><span>Île-de-France</span></div>
+    <div><small>LAB ACTUEL</small><b>Aegis Infra Lab</b><span>En finalisation</span></div>
+  </div>
+</section>
+<section id="profil" class="section shell profile-section">
+  <div class="heading"><span>01</span><h2>Qui suis-je ?</h2><p>PROFIL / BIOGRAPHIE</p></div>
+  <div class="profile-layout">
+    <div class="profile-copy">
+      <span class="eyebrow">ALEXANDRE KIEFER · PARCOURS IT</span>
+      <h3>Construire une infrastructure, comprendre son fonctionnement, puis la sécuriser.</h3>
+      <p>Diplômé d’un <b>Bachelor Administrateur d’Infrastructures Sécurisées</b>, j’ai commencé mon parcours informatique avec un stage de trois mois chez Kertios, principalement autour du support et de l’administration systèmes et réseaux.</p>
+      <p>J’ai ensuite réalisé environ un an d’alternance chez <b>CESAM SEED</b> en tant qu’Administrateur Systèmes, Réseaux & Cybersécurité. J’y ai travaillé sur Windows et Linux, VMware ESXi/vCenter, les réseaux, la sauvegarde, la supervision, la gestion des comptes et des droits d’accès ainsi que la sécurisation des infrastructures.</p>
+      <p>Aujourd’hui, je poursuis ma progression avec <b>Aegis Infra Lab</b>, mon laboratoire personnel, et je recherche une alternance de 24 mois pour préparer un <b>Mastère Expert Cybersécurité</b>.</p>
+    </div>
+    <div class="profile-console">
+      <div><small>FORMATION</small><strong>Bachelor AIS</strong><span>Niveau 6 · Bac+3</span></div>
+      <div><small>EXPÉRIENCE</small><strong>CESAM SEED</strong><span>Admin systèmes / réseaux / cyber</span></div>
+      <div><small>LAB PERSONNEL</small><strong>AEGIS</strong><span>Windows · Linux · OPNsense</span></div>
+      <div><small>OBJECTIF</small><strong>MASTÈRE CYBER</strong><span>Alternance · 24 mois</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section shell">
+  <div class="heading"><span>02</span><h2>Expérience</h2></div>
+  <div class="timeline">
+    <article>
+      <i></i><time>JUIL. 2024 — NOV. 2025</time>
+      <h3>Administrateur Systèmes, Réseaux & Cybersécurité · Alternance</h3><b>CESAM SEED · Paris</b>
+      <p>VMware ESXi/vCenter, sauvegardes Synology, VLAN, ACL, VPN OpenVPN, Reverse Proxy NGINX, comptes et droits d'accès, supervision, PowerShell et documentation technique.</p>
+      <div class="badges"><span>VMware</span><span>Synology</span><span>VLAN / ACL</span><span>OpenVPN</span><span>NGINX</span><span>PowerShell</span></div>
+    </article>
+    <article>
+      <i></i><time>DÉC. 2023 — MARS 2024</time>
+      <h3>Technicien Informatique · Stage</h3><b>Kertios · Suresnes</b>
+      <p>Installation et configuration Windows/Linux, support utilisateurs, incidents, comptes, droits d'accès, partages, tickets, parc informatique et documentation.</p>
+      <div class="badges"><span>Windows</span><span>Linux</span><span>Support</span><span>Tickets</span><span>Documentation</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="aegis" class="section shell flagship">
+  <div class="heading"><span>03</span><h2>Projet phare : Aegis Infra Lab</h2><p>INFRASTRUCTURE · SYSTÈMES · RÉSEAUX · CYBER</p></div>
+  <div class="flagship-head">
+    <div class="flagship-copy">
+      <span class="project-label">PROJET PERSONNEL · LABORATOIRE TECHNIQUE</span>
+      <p>Déploiement d’un lab virtualisé avec <b>OPNsense, Windows Server 2022, Windows Client et Debian 12</b>. L’objectif est de pratiquer l’administration d’une infrastructure complète : identité, services réseau, filtrage, segmentation, supervision, sauvegarde et automatisation.</p>
+      <p>Le laboratoire me permet de passer de la théorie à la pratique, de tester des configurations et de documenter concrètement mon travail.</p>
+    </div>
+    <div class="flagship-metrics">
+      <div><strong>AD</strong><span>Active Directory · GPO</span></div>
+      <div><strong>DNS</strong><span>DNS · DHCP</span></div>
+      <div><strong>FW</strong><span>OPNsense · filtrage</span></div>
+      <div><strong>MON</strong><span>Zabbix · supervision</span></div>
+    </div>
+  </div>
+
+  
+<div class="arch-diagram" aria-label="Schéma simplifié de l'infrastructure Aegis">
+  <div class="arch-title"><span>ARCHITECTURE // AEGIS</span><small>Vue simplifiée des flux principaux</small></div>
+  <div class="arch-flow">
+    <div class="arch-node wan"><b>INTERNET</b><small>WAN</small></div><i>→</i>
+    <div class="arch-node firewall"><b>OPNsense</b><small>Firewall · Routage</small></div><i>→</i>
+    <div class="arch-zone">
+      <div class="arch-node"><b>DC01</b><small>AD · DNS · DHCP</small></div>
+      <div class="arch-node"><b>CLIENT01</b><small>Windows · Domaine</small></div>
+      <div class="arch-node"><b>DEBIAN01</b><small>Linux</small></div>
+    </div><i>→</i>
+    <div class="arch-node monitor"><b>MONITORING</b><small>Zabbix · Grafana</small></div>
+  </div>
+</div>
+<div class="interaction-hint"><b>INTERACTIF</b><span>Sélectionnez une couche : son rôle et son fonctionnement s’affichent dans le panneau de droite.</span></div>
+  <div class="project-explorer">
+    <div class="project-layers">
+      <button class="active" data-project="edge"><i></i><b>Pare-feu & routage</b><span>OPNsense</span></button>
+      <button data-project="identity"><i></i><b>Services d'annuaire</b><span>AD DS · GPO</span></button>
+      <button data-project="network"><i></i><b>Services réseau</b><span>DNS · DHCP</span></button>
+      <button data-project="segment"><i></i><b>Segmentation</b><span>VLAN · ACL</span></button>
+      <button data-project="systems"><i></i><b>Systèmes</b><span>Windows · Debian</span></button>
+      <button data-project="monitor"><i></i><b>Supervision</b><span>Zabbix · Grafana</span></button>
+      <button data-project="continuity"><i></i><b>Continuité</b><span>Synology · 3-2-1</span></button>
+    </div>
+    <div id="projectDetail" class="project-detail"></div>
+  </div>
+
+  <div class="project-docs">
+    <a href="https://github.com/kieferalexandre1-creator/Aegis-Infra-Lab" target="_blank"><b>Dépôt GitHub</b><span>Architecture, configuration et documentation ↗</span></a>
+    <div><b>Administration</b><span>Windows Server · Linux · comptes · droits</span></div>
+    <div><b>Sécurisation</b><span>Filtrage · segmentation · VPN · moindre privilège</span></div>
+  </div>
+</section>
+
+
+<section id="infra-live" class="section shell noc-section">
+  <div class="heading"><span>04</span><h2>Infrastructure en direct</h2><p>AEGIS · TOPOLOGIE INTERACTIVE</p></div>
+  <div class="interaction-hint"><b>INTERACTIF</b><span>Cliquez sur un équipement : sa fiche technique s’affiche immédiatement dans le panneau de droite.</span></div>
+  <div class="noc-shell">
+    <div class="noc-topbar">
+      <div><i></i><b>AEGIS // INFRASTRUCTURE LAB</b></div>
+      <div class="noc-health"><span>● 6 NŒUDS</span><span>● LAB ONLINE</span><span>● MONITORING ACTIVE</span></div>
+    </div>
+
+    <div class="noc-main">
+      <div class="topology" id="topology">
+        <svg class="topology-lines" viewBox="0 0 760 480" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M380 58 L380 126"/>
+          <path d="M380 190 L380 230 L180 230 L180 290"/>
+          <path d="M380 230 L380 290"/>
+          <path d="M380 230 L580 230 L580 290"/>
+          <path d="M180 354 L180 406 L380 406"/>
+          <path d="M380 354 L380 406"/>
+          <path d="M580 354 L580 406 L380 406"/>
+        </svg>
+
+        <button class="node internet" data-node="internet"><span class="node-icon">◎</span><b>INTERNET</b><small>WAN</small></button>
+        <button class="node firewall active" data-node="opnsense"><span class="node-status"></span><span class="node-icon">◇</span><b>OPNsense</b><small>Gateway · Firewall</small></button>
+        <button class="node n1" data-node="dc01"><span class="node-status"></span><span class="node-icon">▣</span><b>DC01</b><small>Windows Server 2022</small></button>
+        <button class="node n2" data-node="client"><span class="node-status"></span><span class="node-icon">▤</span><b>CLIENT01</b><small>Windows · Domaine</small></button>
+        <button class="node n3" data-node="debian"><span class="node-status"></span><span class="node-icon">⌁</span><b>DEBIAN01</b><small>Debian 12</small></button>
+        <button class="node monitor" data-node="zabbix"><span class="node-status"></span><span class="node-icon">⌁</span><b>MONITORING</b><small>Zabbix · Grafana</small></button>
+      </div>
+
+      <aside class="node-inspector" id="nodeInspector"></aside>
+    </div>
+
+    <div class="noc-log">
+      <span id="nocLiveClock" aria-label="Heure locale">--:--:--</span><b>STATUS</b><p>Infrastructure Aegis prête à être explorée — sélectionnez un nœud.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="roadmap" class="section shell roadmap-section">
+  <div class="heading"><span>05</span><h2>Projets & roadmap</h2><p>LABS · 2026 → 2027</p></div>
+  <div class="roadmap-intro roadmap-intro-v9">
+    <div class="roadmap-copy">
+      <span class="eyebrow">APPRENDRE EN CONSTRUISANT</span>
+      <h3>Un laboratoire actuel, trois prochaines étapes.</h3>
+      <p>Aegis est mon laboratoire principal. Les projets suivants prolongeront progressivement mon travail autour de Linux, du cloud et de la détection.</p>
+    </div>
+    <div class="roadmap-summary-v9">
+      <div><small>ACTUEL</small><b>Aegis Infra Lab</b><span>En finalisation</span></div>
+      <div><small>PROCHAIN</small><b>Borealis Linux Lab</b><span>Administration Linux</span></div>
+      <div><small>HORIZON</small><b>2026 → 2027</b><span>3 projets prévus</span></div>
+    </div>
+  </div>
+
+  <div class="lab-sequence-v9" aria-label="Parcours des laboratoires">
+    <article class="active"><span>01</span><div><small>EN FINALISATION</small><b>Aegis</b><em>Infrastructure</em></div></article>
+    <i></i>
+    <article class="next"><span>02</span><div><small>PROCHAIN</small><b>Borealis</b><em>Linux</em></div></article>
+    <i></i>
+    <article><span>03</span><div><small>PRÉVU</small><b>Nimbus</b><em>Cloud</em></div></article>
+    <i></i>
+    <article><span>04</span><div><small>PRÉVU</small><b>Argus</b><em>Détection</em></div></article>
+  </div>
+
+  <div class="project-filters" aria-label="Filtres projets">
+    <button class="active" data-filter="all">Tous <b>4</b></button>
+    <button data-filter="infra">Infrastructure</button>
+    <button data-filter="linux">Linux</button>
+    <button data-filter="cloud">Cloud</button>
+    <button data-filter="blue">Blue Team</button>
+  </div>
+
+  <div class="roadmap-line project-card-layout">
+    <article class="roadmap-project current" data-category="infra">
+      <div class="roadmap-node"></div>
+      <div class="roadmap-meta"><span>PROJET 01</span><b class="status-final">EN FINALISATION</b></div>
+      <div class="roadmap-project-body">
+        <div><small>INFRASTRUCTURE · SYSTÈMES · RÉSEAUX · CYBER</small><h3>Aegis Infra Lab</h3><p>Mon laboratoire actuel : Windows Server, Active Directory, réseau, sécurité, Linux, supervision et continuité.</p></div>
+        <div class="roadmap-stack"><span>Windows Server</span><span>AD DS</span><span>OPNsense</span><span>Debian</span><span>Zabbix</span></div>
+      </div>
+      <a href="#aegis">Explorer le projet actuel →</a>
+    </article>
+
+    <div class="future-projects-label"><span>ENSUITE</span><p>Mes prochains labs — cliquez sur une carte : le détail du projet s’ouvre juste en dessous.</p></div>
+
+    <div class="future-project-grid">
+      <button class="future-project-card linux" data-category="linux" data-future="linux" aria-expanded="false">
+        <div class="future-icon">LX</div>
+        <div class="future-card-top"><span>PROJET 02</span><b>PROCHAIN</b></div>
+        <small>LINUX · ADMINISTRATION</small>
+        <h3>Borealis Linux Lab</h3>
+        <p class="future-teaser">Approfondir Linux au-delà de son utilisation dans Aegis.</p>
+        <div class="future-tags"><span>Debian</span><span>SSH</span><span>Ansible</span><span>Docker</span></div>
+        <strong>Voir ce que je compte faire <i>＋</i></strong>
+      </button>
+
+      <button class="future-project-card cloud" data-category="cloud" data-future="cloud" aria-expanded="false">
+        <div class="future-icon">CL</div>
+        <div class="future-card-top"><span>PROJET 03</span><b>PRÉVU</b></div>
+        <small>CLOUD · IDENTITÉ · RÉSEAU</small>
+        <h3>Nimbus Cloud Lab</h3>
+        <p class="future-teaser">Découvrir le cloud avec un projet volontairement accessible à un junior.</p>
+        <div class="future-tags"><span>Azure</span><span>Entra ID</span><span>RBAC</span><span>VNet</span></div>
+        <strong>Voir ce que je compte faire <i>＋</i></strong>
+      </button>
+
+      <button class="future-project-card blue" data-category="blue" data-future="blue" aria-expanded="false">
+        <div class="future-icon">BT</div>
+        <div class="future-card-top"><span>PROJET 04</span><b>PRÉVU</b></div>
+        <small>BLUE TEAM · DÉTECTION</small>
+        <h3>Argus Detection Lab</h3>
+        <p class="future-teaser">Ajouter une couche détection et analyse de logs à mon profil infrastructure.</p>
+        <div class="future-tags"><span>Wazuh</span><span>Sysmon</span><span>Suricata</span><span>Logs</span></div>
+        <strong>Voir ce que je compte faire <i>＋</i></strong>
+      </button>
+    </div>
+
+    <div class="future-project-detail" id="futureProjectDetail" aria-hidden="true">
+      <button class="future-detail-close" id="futureDetailClose" aria-label="Fermer">×</button>
+      <div class="future-detail-head">
+        <div class="future-detail-icon" id="futureDetailIcon"></div>
+        <div><small id="futureDetailType"></small><h3 id="futureDetailTitle"></h3><span id="futureDetailStatus"></span></div>
+      </div>
+      <p id="futureDetailIntro"></p>
+      <div class="future-detail-grid">
+        <div><small>CE QUE JE COMPTE FAIRE</small><div id="futureDetailTasks"></div></div>
+        <div><small>CE QUE JE VEUX APPRENDRE</small><div id="futureDetailLearn"></div></div>
+      </div>
+      <div class="future-detail-bottom"><span id="futureDetailCost"></span><span id="futureDetailLevel"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="realisations" class="section shell cases-section">
+  <div class="heading"><span>06</span><h2>Réalisations techniques</h2><p>DE LA PROBLÉMATIQUE À LA MISE EN ŒUVRE</p></div>
+  <p class="section-intro">Plutôt qu'une simple liste d'outils : quatre sujets que je sais expliquer, mettre en œuvre et documenter.</p>
+
+  <div class="case-grid">
+    <article class="case-card">
+      <div class="case-no">01</div>
+      <small>IDENTITÉ & ADMINISTRATION</small>
+      <h3>Déployer et administrer Active Directory</h3>
+      <p>Structurer un domaine Windows et centraliser l'administration des utilisateurs, groupes, droits et postes.</p>
+      <dl><div><dt>MISE EN ŒUVRE</dt><dd>AD DS · GPO · comptes · groupes</dd></div><div><dt>SERVICES</dt><dd>DNS · DHCP · Windows Server 2022</dd></div></dl>
+      <button data-case="ad">Voir le détail →</button>
+    </article>
+    <article class="case-card">
+      <div class="case-no">02</div>
+      <small>RÉSEAU & SÉCURITÉ</small>
+      <h3>Segmenter et filtrer les communications</h3>
+      <p>Séparer les usages et limiter les flux autorisés afin de réduire l'exposition entre les différentes zones.</p>
+      <dl><div><dt>MISE EN ŒUVRE</dt><dd>VLAN · ACL · règles firewall</dd></div><div><dt>PASSERELLE</dt><dd>OPNsense · routage · VPN</dd></div></dl>
+      <button data-case="network">Voir le détail →</button>
+    </article>
+    <article class="case-card">
+      <div class="case-no">03</div>
+      <small>EXPLOITATION & MCO</small>
+      <h3>Superviser une infrastructure</h3>
+      <p>Centraliser les informations utiles sur les hôtes et services pour identifier plus rapidement un incident.</p>
+      <dl><div><dt>OUTILS</dt><dd>Zabbix · Grafana</dd></div><div><dt>OBJECTIF</dt><dd>Alertes · disponibilité · suivi</dd></div></dl>
+      <button data-case="monitor">Voir le détail →</button>
+    </article>
+    <article class="case-card">
+      <div class="case-no">04</div>
+      <small>CONTINUITÉ D'ACTIVITÉ</small>
+      <h3>Sauvegarder et préparer la reprise</h3>
+      <p>Travailler la sauvegarde, la restauration et les notions de continuité avec une logique de protection des données.</p>
+      <dl><div><dt>OUTILS</dt><dd>Synology · Active Backup · Hyper Backup</dd></div><div><dt>MÉTHODE</dt><dd>3-2-1 · PRA · RTO/RPO</dd></div></dl>
+      <button data-case="backup">Voir le détail →</button>
+    </article>
+  </div>
+
+  <div class="case-drawer" id="caseDrawer" aria-hidden="true">
+    <button id="closeCase">×</button>
+    <span id="caseEyebrow"></span><h3 id="caseTitle"></h3><p id="caseText"></p>
+    <div id="caseSteps" class="case-steps"></div>
+  </div>
+</section>
+
+<section id="competences" class="section shell">
+  <div class="heading"><span>07</span><h2>Compétences</h2><p>ENVIRONNEMENTS · OUTILS · PRATIQUE</p></div>
+
+  <div class="skills-overview-v10">
+    <div class="skills-intro-v10">
+      <div><span class="eyebrow">STACK TECHNIQUE</span><h3>Une lecture claire de mon socle technique.</h3></div>
+      <p>Des technologies utilisées en formation, en expérience professionnelle ou dans mes laboratoires personnels.</p>
+    </div>
+
+    <div class="skills-grid-v10">
+      <article>
+        <header><span>01</span><div><small>SYSTÈMES</small><h4>Windows & Linux</h4></div></header>
+        <dl>
+          <div><dt>Serveur</dt><dd>Windows Server 2022</dd></div>
+          <div><dt>Postes</dt><dd>Windows 10 / Windows 11</dd></div>
+          <div><dt>Linux</dt><dd>Debian · Ubuntu</dd></div>
+          <div><dt>Identité</dt><dd>Active Directory Domain Services (AD DS) · GPO</dd></div>
+        </dl>
+      </article>
+      <article>
+        <header><span>02</span><div><small>RÉSEAUX & SÉCURITÉ</small><h4>Administration réseau</h4></div></header>
+        <dl>
+          <div><dt>Services</dt><dd>TCP/IP · DNS · DHCP</dd></div>
+          <div><dt>Segmentation</dt><dd>VLAN · ACL · routage</dd></div>
+          <div><dt>Pare-feu</dt><dd>OPNsense · pfSense</dd></div>
+          <div><dt>Accès</dt><dd>OpenVPN · SSL/TLS</dd></div>
+        </dl>
+      </article>
+      <article>
+        <header><span>03</span><div><small>VIRTUALISATION</small><h4>Infrastructure virtuelle</h4></div></header>
+        <dl>
+          <div><dt>VMware</dt><dd>VMware ESXi · VMware vCenter Server</dd></div>
+          <div><dt>Alternative</dt><dd>Proxmox VE</dd></div>
+          <div><dt>Lab actuel</dt><dd>VirtualBox</dd></div>
+          <div><dt>Conteneurs</dt><dd>Docker</dd></div>
+        </dl>
+      </article>
+      <article>
+        <header><span>04</span><div><small>EXPLOITATION</small><h4>Supervision & continuité</h4></div></header>
+        <dl>
+          <div><dt>Supervision</dt><dd>Zabbix · Grafana</dd></div>
+          <div><dt>Sauvegarde</dt><dd>Synology Active Backup for Business · Hyper Backup</dd></div>
+          <div><dt>Continuité</dt><dd>PRA · stratégie 3-2-1</dd></div>
+          <div><dt>Administration</dt><dd>PowerShell · Git</dd></div>
+        </dl>
+      </article>
+    </div>
+
+    <div class="skills-proof-v10">
+      <span>PREUVE PAR LA PRATIQUE</span>
+      <p>AD DS, DNS/DHCP, GPO, OPNsense, Windows Server et Debian sont réunis dans <b>Aegis Infra Lab</b>.</p>
+      <a href="#aegis">Voir Aegis →</a>
+    </div>
+  </div>
+</section>
+
+<section id="certifs" class="section shell cert-section">
+  <div class="heading"><span>08</span><h2>Certifications & badges</h2><p>VALIDATIONS · PARCOURS</p></div>
+  <p class="section-intro">Des validations visibles, lisibles et immédiatement identifiables par un recruteur.</p>
+
+  <div class="cert-hero-grid">
+    <article class="cert-showcase microsoft-showcase">
+      <div class="cert-badge-zone">
+        <div class="badge-halo"></div>
+        <img src="badge-active-directory.png" alt="Badge Microsoft Learn Active Directory Domain Services">
+      </div>
+      <div class="cert-showcase-copy">
+        <div class="cert-provider"><span>MICROSOFT LEARN</span><b>BADGE DE COMPÉTENCES</b></div>
+        <h3>Déployer et gérer les contrôleurs de domaine des services de domaine Active Directory</h3>
+        <p>Déploiement et administration des contrôleurs de domaine Active Directory Domain Services.</p>
+        <div class="cert-tags"><span>AD DS</span><span>Windows Server</span><span>Active Directory</span></div>
+      </div>
+    </article>
+
+    <article class="cert-showcase cisco-showcase">
+      <div class="cert-badge-zone synthetic">
+        <div class="network-glyph"><i></i><i></i><i></i><i></i><i></i></div>
+        <strong>CISCO</strong><small>CYBERSECURITY</small>
+      </div>
+      <div class="cert-showcase-copy">
+        <div class="cert-provider"><span>CISCO</span><b>CAREER PATH</b></div>
+        <h3>Junior Cybersecurity Analyst Career Path</h3>
+        <p>Parcours de validation orienté cybersécurité et analyse.</p>
+        <div class="cert-tags"><span>Cybersecurity</span><span>Security</span><span>Analysis</span></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="cert-strip">
+    <article><div class="provider-icon cisco-icon">C</div><div><small>CISCO</small><h3>Network Technician Career Path</h3><p>Réseaux · exploitation · dépannage</p></div><span>VALIDÉ</span></article>
+    <article><div class="provider-icon aws-icon">aws</div><div><small>AWS</small><h3>Cloud Security Foundations</h3><p>Cloud · sécurité · fondamentaux</p></div><span>VALIDÉ</span></article>
+    <article><div class="provider-icon ms-icon">AD</div><div><small>MICROSOFT</small><h3>Active Directory Domain Services</h3><p>Administration · contrôleurs de domaine</p></div><span>BADGE</span></article>
+  </div>
+
+  <div class="cert-future-v9">
+    <div class="cert-future-head">
+      <div><span class="eyebrow">2026 → 2027</span><h3>Objectifs de progression</h3></div>
+      <p>Des pistes de certification pour accompagner mes prochains labs. <b>Ces certifications ne sont pas encore obtenues.</b></p>
+    </div>
+    <div class="cert-future-grid">
+      <article><span>AZ</span><div><small>MICROSOFT</small><b>AZ-900</b><em>Azure Fundamentals</em></div><i>À ÉTUDIER</i></article>
+      <article><span>SC</span><div><small>MICROSOFT</small><b>SC-900</b><em>Security, Compliance & Identity</em></div><i>À ÉTUDIER</i></article>
+      <article><span>CC</span><div><small>CISCO</small><b>CCNA</b><em>Réseaux & administration</em></div><i>OBJECTIF</i></article>
+      <article><span>LX</span><div><small>LINUX</small><b>Linux Essentials / LPIC</b><em>Administration Linux</em></div><i>OBJECTIF</i></article>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="cv" class="section shell cv-profile-section">
+  <div class="heading"><span>09</span><h2>Curriculum vitæ</h2><p>PROFIL // PARCOURS // COMPÉTENCES</p></div>
+
+  <div class="cv-profile-shell">
+    <div class="cv-profile-head">
+      <div>
+        <small>CANDIDATE_PROFILE / AK-2026</small>
+        <h3>Alexandre <em>Kiefer</em></h3>
+        <p>Administrateur Systèmes, Réseaux & Cybersécurité — recherche une alternance de 24 mois pour poursuivre un Mastère Expert Cybersécurité.</p>
+      </div>
+      <div class="cv-profile-status"><i></i><span>RECHERCHE ALTERNANCE</span><small>1 semaine école · 3 semaines entreprise</small></div>
+    </div>
+
+    <div class="cv-path">
+      <div class="cv-path-item done"><span>2024</span><b>TP Technicien Informatique</b><small>OpenClassrooms · Niveau 5</small></div>
+      <i>→</i>
+      <div class="cv-path-item done"><span>2025</span><b>Bachelor AIS</b><small>LiveCampus · Niveau 6</small></div>
+      <i>→</i>
+      <div class="cv-path-item target"><span>OBJECTIF</span><b>Mastère Expert Cybersécurité</b><small>Alternance · 24 mois</small></div>
+    </div>
+
+    <div class="cv-profile-grid">
+      <div class="cv-experience-panel">
+        <div class="cv-panel-title"><span>01</span><b>EXPÉRIENCES IT</b></div>
+        <article>
+          <time>JUIL. 2024 — NOV. 2025</time>
+          <h4>CESAM SEED</h4>
+          <strong>Administrateur Systèmes, Réseaux & Cybersécurité</strong>
+          <p>Administration systèmes et réseaux, environnements Windows/Linux, virtualisation, comptes et droits, sauvegarde, supervision et sécurisation des infrastructures.</p>
+        </article>
+        <article>
+          <time>DÉC. 2023 — MARS 2024</time>
+          <h4>KERTIOS</h4>
+          <strong>Technicien Informatique · Stage</strong>
+          <p>Support informatique et premières missions d'administration systèmes et réseaux.</p>
+        </article>
+      </div>
+
+      <div class="cv-stack-panel">
+        <div class="cv-panel-title"><span>02</span><b>STACK PRINCIPALE</b></div>
+        <div class="cv-stack-grid">
+          <span>Windows Server</span><span>Active Directory</span><span>Linux</span><span>VMware</span>
+          <span>Proxmox</span><span>OPNsense</span><span>Zabbix</span><span>Grafana</span>
+          <span>PowerShell</span><span>Docker</span><span>VLAN / ACL</span><span>VPN</span>
+        </div>
+        <div class="cv-panel-title cert"><span>03</span><b>CERTIFICATIONS</b></div>
+        <p class="cv-cert-line">Cisco Network Technician · Cisco Junior Cybersecurity Analyst · AWS Cloud Security Foundations · Microsoft Learn AD DS</p>
+      </div>
+    </div>
+
+    <div class="cv-profile-actions">
+      <a class="cv-main-action" href="CV_Kiefer_Alexandre_Alternance.pdf" target="_blank">↗ OUVRIR LE CV COMPLET</a>
+      <a href="CV_Kiefer_Alexandre_Alternance.pdf" download>↓ TÉLÉCHARGER LE PDF</a>
+      <span>PDF · 1 PAGE</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact" class="contact-zone">
+  <div class="shell">
+    <div class="heading contact-heading"><span>10</span><h2>Contact</h2><p>ÉCHANGEONS</p></div>
+
+    <div class="contact-stage">
+      <aside class="contact-profile">
+        <div class="contact-monogram"><span>AK</span><small>SYSTEMS / NETWORK / CYBER</small></div>
+        <h3>Alexandre <em>Kiefer</em></h3>
+        <span class="contact-role">ADMINISTRATEUR SYSTÈMES · RÉSEAUX · CYBER</span>
+        <div class="contact-available">● Recherche une alternance</div>
+        <p>Infrastructure, systèmes, réseaux et cybersécurité. Mastère Expert Cybersécurité en alternance.</p>
+        <div class="profile-actions">
+          <a href="CV_Kiefer_Alexandre_Alternance.pdf" target="_blank">▤ Mon CV</a>
+          <a href="mailto:kiefer.alexandre1@gmail.com">✉ Mon email</a>
+        </div>
+        <div class="profile-social">
+          <a href="https://github.com/kieferalexandre1-creator" target="_blank">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/alexandre-kiefer-847334282/" target="_blank">LinkedIn ↗</a>
+        </div>
+      </aside>
+
+      <section class="contact-panel" id="contactPanel">
+        <div class="contact-summary" id="contactSummary">
+          <div class="open-pill">● OUVERT AUX ÉCHANGES</div>
+          <h2>Une opportunité<br><em>en tête ?</em></h2>
+          <p>Vous recherchez un alternant en systèmes, réseaux ou cybersécurité ? Échangeons directement sur votre opportunité.</p>
+          <div class="contact-cta">
+            <button type="button" id="openContactForm" onclick="openPortfolioContact()">✈ Envoyer un message</button>
+            <a href="CV_Kiefer_Alexandre_Alternance.pdf" target="_blank">▤ Voir mon CV</a>
+          </div>
+          <div class="quick-contact">
+            <a href="mailto:kiefer.alexandre1@gmail.com"><i>✉</i><span><small>EMAIL</small><b>kiefer.alexandre1@gmail.com</b></span></a>
+            <a href="https://www.linkedin.com/in/alexandre-kiefer-847334282/" target="_blank"><i>in</i><span><small>LINKEDIN</small><b>alexandre-kiefer</b></span></a>
+            <a href="https://github.com/kieferalexandre1-creator" target="_blank"><i>⌘</i><span><small>GITHUB</small><b>kieferalexandre1-creator</b></span></a>
+          </div>
+        </div>
+
+        <div class="contact-form-view" id="contactFormView" aria-hidden="true">
+          <button type="button" class="form-back" id="closeContactForm" onclick="closePortfolioContact()">← Retour</button>
+          <div class="open-pill">● OUVERT AUX ÉCHANGES</div>
+          <h2>Me <em>contacter</em></h2>
+          <p class="form-intro">Laissez-moi votre message. Le bouton d'envoi ouvrira votre messagerie avec les informations déjà préparées.</p>
+
+          <form id="portfolioContactForm">
+            <div class="form-row">
+              <label>NOM / PRÉNOM<input name="name" id="contactName" required placeholder="Votre nom"></label>
+              <label>EMAIL<input type="email" name="email" id="contactEmail" required placeholder="votre@email.com"></label>
+            </div>
+            <label>SUJET<input name="subject" id="contactSubject" required placeholder="Alternance, opportunité, question..."></label>
+            <label>MESSAGE<textarea name="message" id="contactMessage" required rows="6" placeholder="Votre message..."></textarea></label>
+            <div class="form-bottom">
+              <span>Aucune donnée n'est stockée sur le portfolio.</span>
+              <button type="submit">Envoyer le message →</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="copyright shell">© 2026 Alexandre Kiefer <span>Administrateur Systèmes · Réseaux · Cybersécurité</span></div>
+</footer>
+<script src="script.js?v=10.0"></script>
+
+<script id="stabilityBridge">
+function openPortfolioContact(){const p=document.querySelector('#contactPanel');if(p){p.classList.add('form-open');p.querySelector('.contact-form-view')?.setAttribute('aria-hidden','false');}}
+function closePortfolioContact(){const p=document.querySelector('#contactPanel');if(p){p.classList.remove('form-open');p.querySelector('.contact-form-view')?.setAttribute('aria-hidden','true');}}
+(function(){
+ const q=s=>document.querySelector(s), qa=s=>Array.from(document.querySelectorAll(s));
+ const panel=q('#contactPanel'), open=q('#openContactForm'), close=q('#closeContactForm');
+ const openContact=()=>{if(panel){panel.classList.add('form-open');panel.querySelector('.contact-form-view')?.setAttribute('aria-hidden','false')}};
+ const closeContact=()=>{if(panel){panel.classList.remove('form-open');panel.querySelector('.contact-form-view')?.setAttribute('aria-hidden','true')}};
+ open?.addEventListener('click',openContact); close?.addEventListener('click',closeContact);
+ const form=panel?.querySelector('form');
+ form?.addEventListener('submit',e=>{e.preventDefault();const f=Array.from(form.querySelectorAll('input,textarea'));const v=n=>f.find(x=>(x.name||x.id||x.placeholder||'').toLowerCase().includes(n))?.value||'';location.href='mailto:kiefer.alexandre1@gmail.com?subject='+encodeURIComponent(v('subject')||v('sujet')||'Contact depuis le portfolio')+'&body='+encodeURIComponent('Nom : '+(v('name')||v('nom'))+'\nEmail : '+v('email')+'\n\n'+v('message'))});
+ qa('.project-layer').forEach(b=>b.addEventListener('click',()=>{qa('.project-layer').forEach(x=>x.classList.remove('active'));b.classList.add('active');try{renderProject(b.dataset.layer)}catch(e){}}));
+ qa('.node').forEach(b=>b.addEventListener('click',()=>{qa('.node').forEach(x=>x.classList.remove('active'));b.classList.add('active');try{showInfraNode(b.dataset.node)}catch(e){}}));
+ qa('.future-project-card').forEach(b=>b.addEventListener('click',()=>{try{openFutureProject(b.dataset.project,b)}catch(e){}}));
+ const modal=q('#cvModal'), img=q('#cvModalImage'), label=q('#cvZoomLabel');let zoom=100;
+ const cvOpen=()=>{if(modal){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}};
+ const cvClose=()=>{if(modal){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}};
+ q('#openCvViewer')?.addEventListener('click',cvOpen);q('#openCvViewer2')?.addEventListener('click',cvOpen);q('#closeCvViewer')?.addEventListener('click',cvClose);
+ q('#cvZoomIn')?.addEventListener('click',()=>{zoom=Math.min(180,zoom+15);if(img)img.style.width=(720*zoom/100)+'px';if(label)label.textContent=zoom+'%'});
+ q('#cvZoomOut')?.addEventListener('click',()=>{zoom=Math.max(60,zoom-15);if(img)img.style.width=(720*zoom/100)+'px';if(label)label.textContent=zoom+'%'});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')cvClose()});
+ try{renderProject('edge')}catch(e){} try{showInfraNode('opnsense')}catch(e){}
+})();
+</script>
+
+<script id="liveClockScript">
+(function(){
+  function updateNocClock(){
+    var el=document.getElementById('nocLiveClock');
+    if(!el)return;
+    var d=new Date();
+    el.textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(function(n){return String(n).padStart(2,'0')}).join(':');
+  }
+  updateNocClock();
+  window.setInterval(updateNocClock,1000);
+})();
+</script>
+
+<script id="v7Enhancements">
+(function(){
+  // Reveal animations
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('reveal-in');io.unobserve(e.target)}});
+    },{threshold:.12});
+    document.querySelectorAll('.section,.quick-facts,.arch-diagram,.future-project-card').forEach(function(el){el.classList.add('reveal-ready');io.observe(el)});
+  }
+
+  // Live NOC clock safety.
+  function tick(){
+    var el=document.getElementById('nocLiveClock'); if(!el)return;
+    var d=new Date(); el.textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(function(n){return String(n).padStart(2,'0')}).join(':');
+  }
+  tick(); setInterval(tick,1000);
+
+  // Technical realization enhancement: after clicking "Voir le détail",
+  // wait for the existing renderer, then add the appropriate architecture diagram and scroll.
+  var diagrams={
+    ad:'<div class="mini-tech-diagram"><div><b>CLIENT01</b><small>Windows</small></div><i>→</i><div class="hot"><b>DC01</b><small>AD DS · DNS · DHCP · GPO</small></div><i>→</i><div><b>IDENTITÉS</b><small>Users · Groups · Rights</small></div></div>',
+    network:'<div class="mini-tech-diagram"><div><b>INTERNET</b><small>WAN</small></div><i>→</i><div class="hot"><b>OPNsense</b><small>Firewall · Routage</small></div><i>→</i><div><b>LAN / ZONES</b><small>VLAN · ACL · VPN</small></div></div>',
+    monitoring:'<div class="mini-tech-diagram"><div><b>HÔTES</b><small>Windows · Linux</small></div><i>→</i><div class="hot"><b>ZABBIX</b><small>Collecte · Alertes</small></div><i>→</i><div><b>GRAFANA</b><small>Visualisation</small></div></div>',
+    backup:'<div class="mini-tech-diagram"><div><b>SERVEURS</b><small>Données</small></div><i>→</i><div class="hot"><b>SYNOLOGY</b><small>Active Backup</small></div><i>→</i><div><b>REPRISE</b><small>3-2-1 · PRA · RTO/RPO</small></div></div>'
+  };
+  document.querySelectorAll('.case-card,.realisation-card,[data-case]').forEach(function(card,index){
+    card.addEventListener('click',function(){
+      setTimeout(function(){
+        var panel=document.querySelector('.case-detail.open,.realisation-detail.open,#caseDetail:not([hidden]),#realisationDetail:not([hidden]),.case-detail-panel');
+        if(!panel)return;
+        panel.querySelector('.mini-tech-diagram')?.remove();
+        var key=(card.dataset.case||card.dataset.key||['ad','network','monitoring','backup'][index]||'ad').toLowerCase();
+        if(key.includes('identity')||key.includes('active'))key='ad';
+        if(key.includes('segment')||key.includes('network'))key='network';
+        if(key.includes('super')||key.includes('monitor'))key='monitoring';
+        if(key.includes('save')||key.includes('backup')||key.includes('continu'))key='backup';
+        var wrap=document.createElement('div');wrap.innerHTML=diagrams[key]||diagrams.ad;
+        panel.appendChild(wrap.firstChild);
+        panel.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+      },80);
+    });
+  });
+
+  // Also catch explicit "Voir le détail" controls if cards themselves aren't buttons.
+  document.querySelectorAll('a,button').forEach(function(btn){
+    if((btn.textContent||'').toLowerCase().includes('voir le détail')){
+      btn.addEventListener('click',function(){
+        setTimeout(function(){
+          var panels=Array.from(document.querySelectorAll('.case-detail,.realisation-detail,.case-detail-panel,[id*="Detail"]'));
+          var p=panels.find(function(x){return x.offsetParent!==null && !x.closest('#cvModal')});
+          if(p)p.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+        },120);
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

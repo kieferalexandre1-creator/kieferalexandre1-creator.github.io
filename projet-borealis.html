@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borealis Linux Lab — Alexandre Kiefer</title>
+<meta name="description" content="Lab Linux en cours : administration Debian, droits, durcissement SSH, UFW, journaux et automatisation Bash.">
+<meta name="theme-color" content="#f4f2ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="index.html">akiefer<span>.</span></a>
+    <div class="actions">
+      <a class="back" href="index.html#projets">← Tous les projets</a>
+      <button class="icon-btn" id="theme" aria-label="Changer de thème">◐</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="p-hero" style="padding-bottom:40px">
+      <div class="p-kicker mono reveal"><span>03 — Lab Linux</span><span>·</span><span>2026</span><span class="badge wip">En cours</span></div>
+      <h1 class="reveal">Borealis Linux Lab</h1>
+      <p class="p-lead reveal">La suite d'Aegis, centrée sur Linux : administration Debian, gestion fine des droits, durcissement SSH, pare-feu, journaux et automatisation Bash. Ansible et Docker viendront ensuite. Chaque étape est documentée avec ses commandes, ses problèmes et leurs solutions.</p>
+      <dl class="p-meta reveal">
+        <div><dt class="mono">Type</dt><dd>Lab personnel</dd></div>
+        <div><dt class="mono">Système</dt><dd>Debian</dd></div>
+        <div><dt class="mono">Avancement</dt><dd>6 chapitres documentés</dd></div>
+        <div><dt class="mono">Code &amp; doc</dt><dd><a href="https://github.com/kieferalexandre1-creator/Borealis-Linux-Lab" target="_blank" rel="noopener" style="border-bottom:1px solid var(--accent)">GitHub ↗</a></dd></div>
+      </dl>
+    </section>
+
+    <div class="diagram reveal" role="img" aria-label="Schéma : un poste client Windows se connecte en SSH par clé au serveur SRV-BOREALIS-01 ; deux autres serveurs, services et contrôle Ansible, sont prévus.">
+      <span class="cap">Architecture · 192.168.56.0/24</span>
+      <div class="tier"><div class="node"><b>Client Windows</b><small>clé SSH ED25519</small></div></div>
+      <div class="wire"></div>
+      <div class="tier"><div class="node key"><b>SSH par clé</b><small>mot de passe désactivé</small></div></div>
+      <div class="wire"></div>
+      <div class="zones">
+        <div class="zone"><span>EN PLACE</span><div class="node"><b>SRV-BOREALIS-01</b><small>admin · durcissement · UFW</small></div></div>
+        <div class="zone blocked"><span>PRÉVU</span>
+          <div class="tier">
+            <div class="node off"><b>SRV-BOREALIS-02</b><small>services · Docker</small></div>
+            <div class="node off"><b>SRV-BOREALIS-CTL</b><small>Ansible · SSH</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="p-sec reveal">
+      <div><span class="mono num">01</span><h2>Déjà réalisé</h2></div>
+      <div class="p-body">
+        <ol class="steps">
+          <li><div><b>Mise en place du serveur</b><span>Nom d'hôte avec <code>hostnamectl</code>, adressage statique, mises à jour et vérification des versions.</span></div></li>
+          <li><div><b>Utilisateurs, groupes et droits</b><span>Groupes <code>borealis-admin</code>, <code>borealis-dev</code>, <code>borealis-web</code>, arborescence <code>/srv/borealis</code> avec SetGID. Tests : chaque utilisateur est bien refusé hors de son périmètre.</span></div></li>
+          <li><div><b>Durcissement SSH</b><span>Connexion root interdite, 3 tentatives maximum, clé ED25519 générée côté client puis authentification par mot de passe désactivée. Configuration validée avec <code>sshd -t</code> et <code>sshd -T</code>.</span></div></li>
+          <li><div><b>Pare-feu</b><span>UFW en refus par défaut sur les connexions entrantes, SSH seul autorisé.</span></div></li>
+          <li><div><b>Journaux</b><span>Lecture des logs SSH avec journald, suivi en direct, stockage persistant plafonné à 200 Mo.</span></div></li>
+          <li><div><b>Automatisation Bash</b><span>Script <code>monitoring.sh</code> : charge, RAM, disque et état de SSH, écrit dans un journal et lancé par cron toutes les 6 heures.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="p-sec reveal">
+      <div><span class="mono num">02</span><h2>Config SSH</h2></div>
+      <div class="p-body">
+        <p>Les réglages clés de <code>/etc/ssh/sshd_config</code>, vérifiés avant chaque redémarrage du service :</p>
+        <div class="code"><span class="d"># /etc/ssh/sshd_config</span>
+PermitRootLogin        <span class="ok">no</span>
+MaxAuthTries           <span class="ok">3</span>
+PubkeyAuthentication   <span class="ok">yes</span>
+PasswordAuthentication <span class="ok">no</span>
+
+<span class="p">$</span> sudo sshd -t        <span class="d"># syntaxe valide → aucun message</span>
+<span class="p">$</span> sudo ufw default deny incoming
+<span class="p">$</span> sudo ufw allow ssh</div>
+      </div>
+    </section>
+
+    <section class="p-sec reveal">
+      <div><span class="mono num">03</span><h2>Feuille de route</h2></div>
+      <div class="p-body">
+        <ul class="checks">
+          <li>Conception et architecture</li>
+          <li>Administration : utilisateurs, droits, services</li>
+          <li>Accès distant et durcissement SSH</li>
+          <li>Journaux et scripts Bash</li>
+          <li class="wait">Ansible depuis SRV-BOREALIS-CTL</li>
+          <li class="wait">Services conteneurisés avec Docker sur SRV-BOREALIS-02</li>
+          <li class="wait">Tests fonctionnels et de sécurité, documentation finale</li>
+        </ul>
+        <ul class="tags" style="margin-top:24px"><li>Debian</li><li>Bash</li><li>OpenSSH</li><li>UFW</li><li>systemd</li><li>journald</li><li>cron</li><li>Ansible (à venir)</li><li>Docker (à venir)</li></ul>
+      </div>
+    </section>
+
+    <a class="next reveal" href="projet-cesam.html">
+      <span class="mono">Retour au début · 01</span>
+      <h2>Modernisation CESAM SEED <span class="arrow">→</span></h2>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap mono">
+    <span>© <span class="year">2026</span> Alexandre Kiefer</span>
+    <nav>
+      <a href="https://github.com/kieferalexandre1-creator/Borealis-Linux-Lab" target="_blank" rel="noopener">Dépôt GitHub ↗</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#projets">← Projets</a>
+    </nav>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

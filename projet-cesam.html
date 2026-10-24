@@ -417,12 +417,12 @@ h1 em{color:var(--accent-ink)}
 .timeline .item:hover{background:color-mix(in srgb,var(--accent) 6%,transparent)}
 
 /* ================= IDENTITÉ V3 : épurée, accent cyan ================= */
-:root{--accent:#0a93a8;--accent-ink:#0a93a8;--glow:10,147,168}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#3fd8ea;--accent-ink:#3fd8ea;--glow:63,216,234}}
-:root[data-theme="dark"]{--accent:#3fd8ea;--accent-ink:#3fd8ea;--glow:63,216,234}
+:root{--accent:#1e3a8a;--accent-ink:#1e3a8a;--glow:30,58,138}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#7c9cff;--accent-ink:#7c9cff;--glow:92,124,250}}
+:root[data-theme="dark"]{--accent:#7c9cff;--accent-ink:#7c9cff;--glow:92,124,250}
 :root:not([data-theme="dark"]){--bg:#f6f6f3;--bg-2:#ecece7;--card:#ffffff;--line:#e2e1db;--ink-2:#5b5a55}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0d0e;--bg-2:#17191b;--card:#121416;--line:#24272a;--ink-2:#959a9e}}
-:root[data-theme="dark"]{--bg:#0c0d0e;--bg-2:#17191b;--card:#121416;--line:#24272a;--ink-2:#959a9e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0f1e;--bg-2:#131b31;--card:#0f172b;--line:#1e2944;--ink-2:#959a9e}}
+:root[data-theme="dark"]{--bg:#0a0f1e;--bg-2:#131b31;--card:#0f172b;--line:#1e2944;--ink-2:#959a9e}
 
 /* Logo + nav */
 .logo{font-family:var(--mono);font-weight:500;font-size:1.05rem;letter-spacing:0}
@@ -440,7 +440,7 @@ h1 em{color:var(--accent)}
 .portrait .tag{left:50%;transform:translateX(-50%);bottom:-6px;border:1px solid var(--line)}
 .portrait{overflow:visible}
 .portrait img{border-radius:50%}
-.btn.fill:hover{background:var(--accent);border-color:var(--accent);color:#0c0d0e}
+.btn.fill:hover{background:var(--accent);border-color:var(--accent);color:#0a0f1e}
 .dot{background:var(--accent);box-shadow:0 0 0 0 var(--accent)}
 
 /* Bandeau chiffres clés */
@@ -459,53 +459,66 @@ h1 em{color:var(--accent)}
 .project{border-radius:16px}
 .project:hover{transform:translateY(-3px);border-color:rgba(var(--glow),.55);box-shadow:0 24px 50px -28px rgba(var(--glow),.55)}
 .project .go{background:none;color:var(--ink-2);border:1px solid var(--line);width:32px;height:32px}
-.project:hover .go{transform:none;background:var(--accent);border-color:var(--accent);color:#0c0d0e}
-.glow-orange{background:radial-gradient(60% 70% at 50% 30%,rgba(63,216,234,.26),transparent 70%),radial-gradient(40% 40% at 90% 95%,rgba(63,120,234,.14),transparent 70%),#0a0c0d!important}
-.net .hot{background:linear-gradient(180deg,#3fd8ea,#1aa6bd);border-color:#6fe6f3;box-shadow:0 0 28px rgba(63,216,234,.45)}
-.net .hot b{color:#04262c}.net .hot small{color:#0b4b55}
-.net .vlan small{color:#3fd8ea}
-.spark polyline{stroke:#3fd8ea}
+.project:hover .go{transform:none;background:var(--accent);border-color:var(--accent);color:#0a0f1e}
+.glow-orange{background:radial-gradient(60% 70% at 50% 30%,rgba(92,124,250,.26),transparent 70%),radial-gradient(40% 40% at 90% 95%,rgba(120,90,234,.14),transparent 70%),#070c1a!important}
+.net .hot{background:linear-gradient(180deg,#7c9cff,#3b5bdb);border-color:#a9bcff;box-shadow:0 0 28px rgba(92,124,250,.45)}
+.net .hot b{color:var(--on-accent)}.net .hot small{color:#24366e}
+.net .vlan small{color:#7c9cff}
+.spark polyline{stroke:#7c9cff}
 .graph .edges line.cut{stroke:#ff8a6b}.graph circle.bad{stroke:#ff8a6b}.graph text.bad{fill:#ff8a6b}
-.win-body .p{color:#3fd8ea}
+.win-body .p{color:#7c9cff}
 .project .stats span{letter-spacing:.04em}
 .lab{border-style:solid;background:transparent}
 
 /* Parcours / compétences */
-.badge.live{background:var(--accent);color:#04262c}
+.badge.live{background:var(--accent);color:var(--on-accent)}
 .skill:hover{border-color:rgba(var(--glow),.6)}
-.skill:hover .ico{background:var(--accent);color:#04262c}
+.skill:hover .ico{background:var(--accent);color:var(--on-accent)}
 .timeline .group{color:var(--accent)}
 .timeline .item:hover{background:rgba(var(--glow),.05)}
 .cert-list li{background:var(--card)}
 
 /* Contact : carte sombre, lueur discrète */
-.contact{background:#0f1113;color:#eef1f2;border:1px solid #23272b;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:auto auto -40% -10%;width:70%;height:90%;background:radial-gradient(closest-side,rgba(63,216,234,.22),transparent);pointer-events:none}
+.contact{background:#0b1226;color:#eef1fb;border:1px solid #1f2a47;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:auto auto -40% -10%;width:70%;height:90%;background:radial-gradient(closest-side,rgba(92,124,250,.22),transparent);pointer-events:none}
 .contact > *{position:relative}
-.contact h2{color:#eef1f2}
-.contact .mono{color:#3fd8ea;opacity:1}
-.contact p{color:#b7bec2;opacity:1}
-.contact .label{color:#7f878c!important}
-.contact .mail{color:#eef1f2;border-bottom-color:#3fd8ea}
-.contact ul.info li{color:#b7bec2}
-.btn.dark{background:#eef1f2;color:#0c0d0e;border-color:#eef1f2}
-.btn.dark:hover{background:#3fd8ea;border-color:#3fd8ea;color:#04262c}
-.btn.line{color:#eef1f2;border-color:#3a4045}
-.btn.line:hover{background:#eef1f2;color:#0c0d0e}
-.form-card{background:#15181a;border:1px solid #262b2f;box-shadow:none}
-.form-card .btn.send{background:#3fd8ea;border-color:#3fd8ea;color:#04262c}
-.form-card input:focus,.form-card textarea:focus{border-color:#3fd8ea}
+.contact h2{color:#eef1fb}
+.contact .mono{color:#7c9cff;opacity:1}
+.contact p{color:#b4bdd6;opacity:1}
+.contact .label{color:#7d88a8!important}
+.contact .mail{color:#eef1fb;border-bottom-color:#7c9cff}
+.contact ul.info li{color:#b4bdd6}
+.btn.dark{background:#eef1fb;color:#0a0f1e;border-color:#eef1fb}
+.btn.dark:hover{background:#7c9cff;border-color:#7c9cff;color:var(--on-accent)}
+.btn.line{color:#eef1fb;border-color:#33406a}
+.btn.line:hover{background:#eef1fb;color:#0a0f1e}
+.form-card{background:#101a33;border:1px solid #22305a;box-shadow:none}
+.form-card .btn.send{background:#7c9cff;border-color:#7c9cff;color:var(--on-accent)}
+.form-card input:focus,.form-card textarea:focus{border-color:#7c9cff}
 
 /* Pages projet */
-.diagram{background:radial-gradient(60% 50% at 50% 0%,rgba(63,216,234,.14),transparent 70%),#0a0c0d}
-.node.key{border-color:#3fd8ea;box-shadow:0 0 18px rgba(63,216,234,.3)}
-.node.key b{color:#3fd8ea}
-.zone > span{color:#3fd8ea}
+.diagram{background:radial-gradient(60% 50% at 50% 0%,rgba(92,124,250,.14),transparent 70%),#070c1a}
+.node.key{border-color:#7c9cff;box-shadow:0 0 18px rgba(92,124,250,.3)}
+.node.key b{color:#7c9cff}
+.zone > span{color:#7c9cff}
 .steps li::before{color:var(--accent)}
 .next:hover h2{color:var(--accent)}
-.code .p{color:#3fd8ea}
+.code .p{color:#7c9cff}
 .back:hover{border-color:var(--accent);color:var(--accent)}
 .hero{overflow-x:clip}html{overflow-x:hidden}
+
+/* ===== Bleu nuit ===== */
+:root{--on-accent:#ffffff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--on-accent:#0a0f1e;--ink:#eef1fb;--ink-2:#93a0c2}}
+:root[data-theme="dark"]{--on-accent:#0a0f1e;--ink:#eef1fb;--ink-2:#93a0c2}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ink:#0f1730}}
+:root[data-theme="light"]{--ink:#0f1730}
+.btn.fill:hover{color:var(--on-accent)}
+.project:hover .go{color:var(--on-accent)}
+.net .hot b,.net .hot small{color:#fff}
+.net .hot{background:linear-gradient(180deg,#3d5afe,#1e3a8a)}
+.contact .btn.dark:hover,.form-card .btn.send{color:#0a0f1e}
+.btn.dark{color:#0a0f1e}
 
 </style>
 </head>
